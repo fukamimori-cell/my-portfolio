@@ -110,6 +110,8 @@ function renderGallery(kind) {
   let galleryTouchY = null;
   const gallery = document.querySelector('.gallery');
   gallery.addEventListener('touchstart', e => { galleryTouchY = e.changedTouches[0].clientY; }, { passive:true });
+  // Keep a swipe that starts on the artwork dial from scrolling the page.
+  gallery.addEventListener('touchmove', e => e.preventDefault(), { passive:false });
   gallery.addEventListener('touchend', e => {
     if (galleryTouchY === null) return;
     const distance = galleryTouchY - e.changedTouches[0].clientY;
