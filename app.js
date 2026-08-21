@@ -1,11 +1,10 @@
-mport { siteContent, galleries } from './content.js';
+import { siteContent, works } from './content.js';
 
-const works = galleries.works;
 const app = document.querySelector('#app');
 const safeText = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('\n', '<br>');
 const menu = [
   { label:'About', page:'about' }, { label:'Works/Projects', page:'works' },
-  { label:'Graphics', page:'graphics' }, { label:'Experiments', page:'experiments' }, { label:'Contact', page:'about' },
+  { label:'Graphics', page:'works' }, { label:'Experiments', page:'experiments' }, { label:'Contact', page:'about' },
 ];
 
 let menuOffset = 1;
@@ -75,20 +74,14 @@ function renderAbout() {
   document.querySelector('.back').addEventListener('click', renderHome);
 }
 function renderGallery(kind) {
-  const subset = galleries[kind] || [];
-
-const titles = {
-  works: 'Works/Projects',
-  graphics: 'Graphics',
-  experiments: 'Experiments'
-};
-
-const title = titles[kind] || kind;
+  const experiments = kind === 'experiments';
+  const title = experiments ? 'Experiments' : 'Works/Projects';
+  const subset = experiments ? works.slice(3) : works;
   // Repeat the available works around the ring so the circle stays complete
   // while the portfolio is still growing.
   const ringLength = Math.max(13, subset.length);
   const ringItems = Array.from({ length:ringLength }, (_, index) => subset[index % subset.length]);
-  app.innerHTML = `<section class="page gallery-page">${backButton()}<div class="gallery-intro"><h1>${title}</h1>${kind === 'experiments' ? `<p>${siteContent.experimentsDescription}</p>` : ''}</div><div class="gallery"><div class="gallery-wheel">${ringItems.map((work, index) => `<button class="work-card" style="--color:${work.color};--image:url('${work.image || ''}')" data-work="${index}" aria-label="${work.title}"><span class="thumb"></span><span class="work-label"><strong>${work.title}</strong><span>${work.year}</span></span></button>`).join('')}</div></div></section><div class="modal" hidden><button class="close" aria-label="Close">×</button><article class="modal-card"><div class="modal-image">photo image</div><div class="modal-info"><h2></h2><p></p></div></article></div>`;
+  app.innerHTML = `<section class="page gallery-page">${backButton()}<div class="gallery-intro"><h1>${title}</h1>${experiments ? `<p>${siteContent.experimentsDescription}</p>` : ''}</div><div class="gallery"><div class="gallery-wheel">${ringItems.map((work, index) => `<button class="work-card" style="--color:${work.color};--image:url('${work.image || ''}')" data-work="${index}" aria-label="${work.title}"><span class="thumb"></span><span class="work-label"><strong>${work.title}</strong><span>${work.year}</span></span></button>`).join('')}</div></div></section><div class="modal" hidden><button class="close" aria-label="Close">×</button><article class="modal-card"><div class="modal-image">photo image</div><div class="modal-info"><h2></h2><p></p></div></article></div>`;
   let active = 0;
   const wheel = document.querySelector('.gallery-wheel');
   function layout() {
