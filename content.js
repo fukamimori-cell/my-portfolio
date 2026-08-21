@@ -26,7 +26,7 @@ export const galleries = {
   { title: '山歳時記', year: 'UX design / 2024', image: '', color: '#b8adb0', text: '日本ならではの食文化「山菜」を知るための、都市部に暮らす子供たちに向けた食育を促すツール。' },
   { title: 'blooming days', year: 'product design / 2025', image: '', color: '#aaa8a0', text: '1日を実感するための、めくって花がさくカレンダー。あっという間に過ぎてしまう1年をポジティブに捉えるためのツール。' },
   { title: '[ether] shop direction', year: 'art direction / 2025', image: '', color: '#a6a6a6', text: '武蔵野美術大学芸術祭にて有志で出店したショップのプロモーションをディレクション。' },
-  { title: '武蔵野美術大学 視覚伝達デザイン学科 卒業・修了制作店2025　ビジュアル設計', year: 'art direction　graphic design / 2026', image: '', color: '#a6a6a6', text: '卒業を間近に控えた、次の段階に移る学生の緊張感や「変化の直前」にある姿を「青い蛹」というテーマを通して可視化した。' },
+  { title: '武蔵野美術大学視覚伝達デザイン学科 卒業・修了制作展2025', year: 'art direction　graphic design / 2026', image: '', color: '#a6a6a6', text: '卒業を間近に控えた、次の段階に移る学生の緊張感や「変化の直前」にある姿を「青い蛹」というテーマを通して可視化した。' },
   { title: 'Disolved,become.', year: 'graphic design / 2026', image: '', color: '#a6a6a6', text: '蝶は蛹の中で液体となり、身体が再生成される。私たちから見えない生き物の形の生まれを、空間を使ったグラフィックで表現した。' },
   { title: 'ZINE 20', year: 'graphic design / 2023', image: '', color: '#a6a6a6', text: '20歳の節目に自分のこれまで作ったグラフィックをまとめた小冊子を制作した。' },
   { title: 'Asteroid Expedition Disease Record', year: 'graphic design / 2024', image: '', color: '#a6a6a6', text: '人間が宇宙さえも労働環境になった未来では、いろいろな疾病が発生すると思い、もしものための記録をまとめました。' },
