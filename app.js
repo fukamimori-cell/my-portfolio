@@ -1,5 +1,6 @@
-import { siteContent, works } from './content.js';
+import { siteContent, galleries } from './content.js';
 
+const works = galleries.works;
 const app = document.querySelector('#app');
 const safeText = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('\n', '<br>');
 const menu = [
