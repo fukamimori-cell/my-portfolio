@@ -1,11 +1,11 @@
-import { siteContent, galleries } from './content.js';
+mport { siteContent, galleries } from './content.js';
 
 const works = galleries.works;
 const app = document.querySelector('#app');
 const safeText = value => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('\n', '<br>');
 const menu = [
   { label:'About', page:'about' }, { label:'Works/Projects', page:'works' },
-  { label:'Graphics', page:'works' }, { label:'Experiments', page:'experiments' }, { label:'Contact', page:'about' },
+  { label:'Graphics', page:'graphics' }, { label:'Experiments', page:'experiments' }, { label:'Contact', page:'about' },
 ];
 
 let menuOffset = 1;
@@ -75,9 +75,15 @@ function renderAbout() {
   document.querySelector('.back').addEventListener('click', renderHome);
 }
 function renderGallery(kind) {
-  const experiments = kind === 'experiments';
-  const title = experiments ? 'Experiments' : 'Works/Projects';
-  const subset = experiments ? works.slice(3) : works;
+  const subset = galleries[kind] || [];
+
+const titles = {
+  works: 'Works/Projects',
+  graphics: 'Graphics',
+  experiments: 'Experiments'
+};
+
+const title = titles[kind] || kind;
   // Repeat the available works around the ring so the circle stays complete
   // while the portfolio is still growing.
   const ringLength = Math.max(13, subset.length);
