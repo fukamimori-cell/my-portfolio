@@ -11,7 +11,7 @@ export const siteContent = {
     text: '三森楓花/Fuka Mimori　武蔵野美術大学卒業。デザイナー1年目。グラフィックデザイン。最近は仕組みを考えることに興味があります。虫が好き。',
   },
   contact: {
-    text: 'プロジェクトのご相談やご依頼は、こちらからお気軽にご連絡ください。\n\nInstagram / @fuka_mimori',
+    text: 'ご相談やご依頼は、こちらからお気軽にご連絡ください。\n\nInstagram / @fuka_mimori',
   },
   experimentsDescription: 'プロトタイプや気軽な作品を載せています。',
 };
@@ -32,10 +32,10 @@ export const galleries = {
   { title: 'Asteroid Expedition Disease Record', year: 'graphic design / 2024', image: '', color: '#a6a6a6', text: '人間が宇宙さえも労働環境になった未来では、いろいろな疾病が発生すると思い、もしものための記録をまとめました。' },
   ],
   experiments: [
-  { title: 'After image', year: 'experiment / 2022', image: '', color: '#adb4bd', text: 'A moving-image study of memory.' },
-  { title: 'Folded note', year: 'editorial / 2022', image: '', color: '#b5ad9e', text: 'A small publication designed to unfold.' },
-  { title: '', year: '', image: '', color: '#a6a6a6', text: '' },
-  { title: '', year: '', image: '', color: '#a6a6a6', text: '' },
+  { title: 'laser cutter01', year: '2025', image: '', color: '#adb4bd', text: 'レーザーカッターで製作したレースパターンを切ってみました。背中に刺繍が入っているように見える。' },
+  { title: 'product01', year: '2026', image: '', color: '#b5ad9e', text: 'アクリルをカットして、花モチーフのインテリアを作れないかと思い試作。' },
+  { title: 't-shirt01', year: '2026', image: '', color: '#a6a6a6', text: '自作のグラフィックをTシャツにプリントしました。ゲームのインベントリ画面のようなイメージ。' },
+  { title: 't-shirt02', year: '2026', image: '', color: '#a6a6a6', text: '自作のグラフィックをTシャツにプリントしました。ボーリング調査を意識。' },
   { title: '', year: '', image: '', color: '#a6a6a6', text: '' },
   { title: '', year: '', image: '', color: '#a6a6a6', text: '' },
   { title: '', year: '', image: '', color: '#a6a6a6', text: '' },
